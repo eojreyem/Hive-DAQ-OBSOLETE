@@ -9,39 +9,45 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/select_colony"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Select Colony"
+        android:onClick="selectHive"
+        android:layout_marginTop="142dp"
+        android:width="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/last_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:text="Last Selected"
+        android:layout_below="@+id/select_colony"
+        android:layout_alignLeft="@+id/select_colony"
+        android:layout_alignRight="@+id/select_colony" />
+
+    <Button
+        android:id="@+id/create_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:text="Create New"
+        android:onClick="newColony"
+        android:layout_below="@+id/last_selected"
+        android:layout_alignLeft="@+id/last_selected"
+        android:layout_alignRight="@+id/last_selected" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hive Inspections"
+        android:id="@+id/main_title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Select a Hive" 
-        android:onClick="selectHive" />
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Review Data" />
-
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="Configure" />
-
-    <Button
-        android:id="@+id/Button03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp"
-        android:text="Push Database" />
+        android:layout_marginTop="23dp" />
 
 </RelativeLayout>
