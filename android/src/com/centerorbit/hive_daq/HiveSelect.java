@@ -1,11 +1,11 @@
 package com.centerorbit.hive_daq;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,14 +14,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.centerorbit.hive_daq.model.Colony;
-import com.centerorbit.hive_daq.model.ColonyDataSource;
+import com.centerorbit.hive_daq.model.MainDataSource;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HiveSelect extends Activity {
 
-    private ColonyDataSource datasource;
+    private MainDataSource datasource;
     private Context appContext;
     private ArrayAdapter<Colony> adapter;
     private Activity that;
@@ -36,10 +35,10 @@ public class HiveSelect extends Activity {
 
         ListView listView = (ListView) findViewById(R.id.hive_list);
 
-        datasource = new ColonyDataSource(appContext);
+        datasource = new MainDataSource(appContext);
         datasource.open();
 
-        List<Colony> values = datasource.getAllColonies();
+        List<Colony> values = datasource.Colony().getAll();
 
         // First paramenter - Context
         // Second parameter - Layout for the row
@@ -97,7 +96,7 @@ public class HiveSelect extends Activity {
     }
 
     private void deleteColony(Colony colony){
-        datasource.deleteColony(colony);
+        datasource.Colony().delete(colony);
         adapter.remove(colony);
     }
 

@@ -8,14 +8,14 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
-import com.centerorbit.hive_daq.model.ColonyDataSource;
+import com.centerorbit.hive_daq.model.MainDataSource;
 
 /**
  * Created by andy on 11/6/13.
  */
 public class NewColony extends Activity {
 
-    private ColonyDataSource datasource;
+    private MainDataSource datasource;
     private Context appContext;
 
     @Override
@@ -24,7 +24,7 @@ public class NewColony extends Activity {
         setContentView(R.layout.activity_new_colony);
         this.appContext = this;
 
-        datasource = new ColonyDataSource(appContext);
+        datasource = new MainDataSource(appContext);
         datasource.open();
     }
 
@@ -45,7 +45,7 @@ public class NewColony extends Activity {
         EditText newColonyName = (EditText) findViewById(R.id.new_colony_name);
 
 
-        datasource.createColony(newColonyName.getText().toString());
+        datasource.Colony().create(newColonyName.getText().toString());
         datasource.close();
 
         // Do something in response to button
