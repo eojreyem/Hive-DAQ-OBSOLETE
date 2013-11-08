@@ -55,14 +55,32 @@ public class HiveSelect extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                String selectedFromList = parent.getItemAtPosition(position).toString();
+                final String selectedFromList = parent.getItemAtPosition(position).toString();
 
-                Toast.makeText(getApplicationContext(),
-                        selectedFromList, Toast.LENGTH_SHORT)
-                        .show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(appContext);
+                builder.setMessage("An inspection of hive \"" + selectedFromList + "\" on [DATE] is already in progress!")
+                        .setCancelable(false)
+                        .setPositiveButton("Resume last inspection", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Toast.makeText(getApplicationContext(),
+                                        "Resume "+selectedFromList, Toast.LENGTH_SHORT)
+                                        .show();
+                                Intent intent = new Intent(that, InspectHive.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("Begin a new inspection", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Toast.makeText(getApplicationContext(),
+                                        "New session "+selectedFromList, Toast.LENGTH_SHORT)
+                                        .show();
+                                Intent intent = new Intent(that, InspectHive.class);
+                                startActivity(intent);
+                            }
+                        });
 
-                Intent intent = new Intent(that, InspectHive.class);
-                startActivity(intent);
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 

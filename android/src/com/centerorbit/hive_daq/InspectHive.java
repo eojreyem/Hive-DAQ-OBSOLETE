@@ -1,17 +1,23 @@
 package com.centerorbit.hive_daq;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
+import android.widget.Toast;
 
-public class InspectHive extends Activity {
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class InspectHive extends Activity
+implements WeatherInterface {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_inspect_hive);
+
+        Weather test = new Weather();
+        test.getLatest(45.427960f, -93.141952f, this);
 	}
 
 	@Override
@@ -20,12 +26,25 @@ public class InspectHive extends Activity {
 		getMenuInflater().inflate(R.menu.inspect_hive, menu);
 		return true;
 	}
-	
-	/** Called when the user clicks the Select a Hive */
-	public void back(View view) {
-	    // Do something in response to button
-		Intent intent = new Intent(this, HiveSelect.class);
-		startActivity(intent);
-	}
 
+    @Override
+    public void weatherHasUpdated(JSONObject weather) {
+        try{
+            Double temperature = weather.getJSONObject("currently").getDouble("temperature");
+            Double cloudCover = weather.getJSONObject("currently").getDouble("cloudCover");
+
+            //TODO: yeah, Toast is great... but instead we should update the UI, and store in DB.
+            Toast.makeText(this.getApplicationContext(), "The temp is: "+temperature.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "The cloud cover is: "+cloudCover.toString(), Toast.LENGTH_SHORT).show();
+        }
+        catch (JSONException error){
+            //Do nothing about it?
+        }
+    }
+
+    @Override
+    public void weatherFailedUpdate() {
+        //TODO: Perhaps a real fail thing.
+        Toast.makeText(this.getApplicationContext(), "Weather failed to update.", Toast.LENGTH_SHORT).show();
+    }
 }
