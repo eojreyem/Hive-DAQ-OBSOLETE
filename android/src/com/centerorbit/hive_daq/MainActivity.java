@@ -1,8 +1,8 @@
 package com.centerorbit.hive_daq;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
@@ -27,5 +27,12 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, HiveSelect.class);
 		startActivity(intent);
 	}
+
+    /** Called when the user clicks the "Create New" */
+    public void newColony(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, NewColony.class);
+        startActivity(intent);
+    }
 
 }

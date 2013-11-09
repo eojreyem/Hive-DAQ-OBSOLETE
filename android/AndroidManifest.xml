@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -28,6 +29,10 @@
         </activity>
         <activity
             android:name="com.centerorbit.hive_daq.InspectHive"
+            android:label="@string/title_activity_inspect_hive" >
+        </activity>
+        <activity
+            android:name="com.centerorbit.hive_daq.NewColony"
             android:label="@string/title_activity_inspect_hive" >
         </activity>
     </application>

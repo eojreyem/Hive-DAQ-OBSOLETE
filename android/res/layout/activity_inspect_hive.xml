@@ -8,58 +8,99 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".InspectHive" >
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="24dp"
-        android:layout_toLeftOf="@+id/button1"
-        android:text="Queen" />
-
-    <Button
-        android:id="@+id/Button05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="95dp"
-        android:text="Test Results" />
-
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button05"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:text="Frames of bees" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Back" 
-        android:onClick="back" />
+        android:rowCount="5"
+        android:columnCount="3">
 
-    <Button
-        android:id="@+id/Button03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Button02"
-        android:layout_marginBottom="48dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="Weight" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Details"
+            android:id="@+id/button"
+            android:layout_row="0"
+            android:layout_column="0" />
 
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/Button03"
-        android:layout_alignBottom="@+id/Button03"
-        android:layout_alignRight="@+id/Button02"
-        android:text="Brood" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queen"
+            android:id="@+id/button6"
+            android:layout_row="0"
+            android:layout_column="2" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disease"
+            android:id="@+id/button2"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colony"
+            android:id="@+id/button3"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:id="@+id/button4"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipment"
+            android:id="@+id/button5"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voice Rec"
+            android:id="@+id/button7"
+            android:layout_row="3"
+            android:layout_column="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tests"
+            android:id="@+id/button8"
+            android:layout_row="2"
+            android:layout_column="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disease"
+            android:id="@+id/button9"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Managment"
+            android:id="@+id/button10"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Note"
+            android:id="@+id/button11"
+            android:layout_row="3"
+            android:layout_column="1" />
+    </GridLayout>
 </RelativeLayout>
