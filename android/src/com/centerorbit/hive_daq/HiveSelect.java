@@ -40,7 +40,7 @@ public class HiveSelect extends Activity {
 
         List<Colony> values = datasource.Colony().getAll();
 
-        // First paramenter - Context
+        // First parameter - Context
         // Second parameter - Layout for the row
         // Third parameter - ID of the TextView to which the data is written
         // Forth - the Array of data

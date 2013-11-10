@@ -1,8 +1,10 @@
 package com.centerorbit.hive_daq;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -47,4 +49,12 @@ implements WeatherInterface {
         //TODO: Perhaps a real fail thing.
         Toast.makeText(this.getApplicationContext(), "Weather failed to update.", Toast.LENGTH_SHORT).show();
     }
+    
+    public void Queen_menu(View view) {
+    	//TODO: Perhaps a real fail thing.
+        Toast.makeText(this.getApplicationContext(), "Open Queen Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Queen.class);
+        startActivity(intent);
+    }
+ 
 }

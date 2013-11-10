@@ -1,106 +1,106 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".InspectHive" >
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:rowCount="5"
-        android:columnCount="3">
+	<TableRow
+		android:id="@+id/tableRow1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" >
+		
+        	<Button
+            	android:id="@+id/bt_managment"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Managment" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit Details"
-            android:id="@+id/button"
-            android:layout_row="0"
-            android:layout_column="0" />
+        	<Button
+            	android:id="@+id/bt_tests"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Tests" />
+        	
+        	<Button
+            	android:id="@+id/bt_disease"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Disease" />
+        	                              
+	</TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Queen"
-            android:id="@+id/button6"
-            android:layout_row="0"
-            android:layout_column="2" />
+	<TableRow
+		android:id="@+id/tableRow2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" >
+        	<Button
+            	android:id="@+id/bt_details"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Edit Details" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Disease"
-            android:id="@+id/button2"
-            android:layout_row="1"
-            android:layout_column="0" />
+        	<Button
+            	android:id="@+id/bt_equipment"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Equipment" />
+        	
+        	<Button
+            	android:id="@+id/bt_queen"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:onClick="Queen_menu"
+            	android:text="Queen" />
+        	                
+	</TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Colony"
-            android:id="@+id/button3"
-            android:layout_row="2"
-            android:layout_column="0" />
+    <TableRow
+    	android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        	<Button
+            	android:id="@+id/bt_colony"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Colony" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Camera"
-            android:id="@+id/button4"
-            android:layout_row="3"
-            android:layout_column="0" />
+        	
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Equipment"
-            android:id="@+id/button5"
-            android:layout_row="1"
-            android:layout_column="2" />
+        	
+	</TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Voice Rec"
-            android:id="@+id/button7"
-            android:layout_row="3"
-            android:layout_column="2" />
+    <TableRow
+    	android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        	
+        	<Button
+            	android:id="@+id/bt_camera"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Camera" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tests"
-            android:id="@+id/button8"
-            android:layout_row="2"
-            android:layout_column="2" />
+        	<Button
+            	android:id="@+id/bt_textnote"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Text Note" />
+        	
+        	<Button
+            	android:id="@+id/bt_voicenote"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_weight=".33"
+            	android:text="Voice Note" />
+        	
+	</TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Disease"
-            android:id="@+id/button9"
-            android:layout_row="2"
-            android:layout_column="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Managment"
-            android:id="@+id/button10"
-            android:layout_row="1"
-            android:layout_column="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Text Note"
-            android:id="@+id/button11"
-            android:layout_row="3"
-            android:layout_column="1" />
-    </GridLayout>
-</RelativeLayout>
+ 
+</TableLayout>

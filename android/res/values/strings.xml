@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_hive_select">HiveSelect</string>
     <string name="title_activity_inspect_hive">InspectHive</string>
+    <string name="title_activity_queen">Queen</string>
 
 </resources>
