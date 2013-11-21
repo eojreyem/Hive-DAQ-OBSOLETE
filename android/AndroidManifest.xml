@@ -45,7 +45,10 @@
             android:name="com.centerorbit.hive_daq.Evaluation"
             android:label="@string/title_activity_evaluation" >
         </activity>
+        <activity
+            android:name=".Disease"
+            android:label="disease_menu" />
 
-     </application>
+    </application>
 
 </manifest>

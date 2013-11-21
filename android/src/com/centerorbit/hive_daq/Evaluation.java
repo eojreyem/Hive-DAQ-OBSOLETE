@@ -27,5 +27,10 @@ public class Evaluation extends Activity {
         startActivity(intent);
     }
 
+    public void Disease(View view) {
+        Toast.makeText(this.getApplicationContext(), "Open Disease Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Disease.class);
+        startActivity(intent);
+    }
 
 }
