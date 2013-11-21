@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -41,6 +41,11 @@
             android:name="com.centerorbit.hive_daq.Queen"
             android:label="@string/title_activity_queen" >
         </activity>
-    </application>
+        <activity
+            android:name="com.centerorbit.hive_daq.Evaluation"
+            android:label="@string/title_activity_evaluation" >
+        </activity>
+
+     </application>
 
 </manifest>

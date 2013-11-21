@@ -51,9 +51,14 @@ implements WeatherInterface {
     }
     
     public void Queen_menu(View view) {
-    	//TODO: Perhaps a real fail thing.
         Toast.makeText(this.getApplicationContext(), "Open Queen Menu", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Queen.class);
+        startActivity(intent);
+    }
+
+    public void Evaluation(View view) {
+        Toast.makeText(this.getApplicationContext(), "Open Evaluation Form", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Evaluation.class);
         startActivity(intent);
     }
  
