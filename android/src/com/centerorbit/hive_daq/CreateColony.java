@@ -13,7 +13,7 @@ import com.centerorbit.hive_daq.model.MainDataSource;
 /**
  * Created by andy on 11/6/13.
  */
-public class NewColony extends Activity {
+public class CreateColony extends Activity {
 
     private MainDataSource datasource;
     private Context appContext;
@@ -21,7 +21,7 @@ public class NewColony extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_colony);
+        setContentView(R.layout.activity_create_colony);
         this.appContext = this;
 
         datasource = new MainDataSource(appContext);

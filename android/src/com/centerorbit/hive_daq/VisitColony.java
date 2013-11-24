@@ -10,13 +10,13 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class InspectHive extends Activity
+public class VisitColony extends Activity
 implements WeatherInterface {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_inspect_hive);
+		setContentView(R.layout.activity_visit);
 
         Weather test = new Weather();
         test.getLatest(45.427960f, -93.141952f, this);
@@ -51,8 +51,8 @@ implements WeatherInterface {
     }
     
     public void Queen_menu(View view) {
-        Toast.makeText(this.getApplicationContext(), "Open Queen Menu", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Queen.class);
+        Toast.makeText(this.getApplicationContext(), "Open QueenEval Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, QueenEval.class);
         startActivity(intent);
     }
 
@@ -65,6 +65,18 @@ implements WeatherInterface {
     public void Disease(View view) {
         Toast.makeText(this.getApplicationContext(), "Open Disease Menu", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Disease.class);
+        startActivity(intent);
+    }
+
+    public void Management(View view) {
+        Toast.makeText(this.getApplicationContext(), "Open Management Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Management.class);
+        startActivity(intent);
+    }
+
+    public void Equipment(View view) {
+        Toast.makeText(this.getApplicationContext(), "Open Equipment Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Equipment.class);
         startActivity(intent);
     }
  

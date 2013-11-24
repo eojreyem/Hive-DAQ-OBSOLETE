@@ -70,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_row="13"
+        android:onClick="Equipment"
         android:text="Equipment" />
 
     <Button
@@ -78,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_row="14"
+        android:onClick="Management"
         android:text="Managment" />
 
     <!-- note taking buttons in bottom row. -->

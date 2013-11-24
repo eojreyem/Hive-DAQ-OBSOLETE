@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.centerorbit.hive_daq.MainActivity"
+            android:name=".Main"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,15 +30,15 @@
             android:label="@string/title_activity_hive_select" >
         </activity>
         <activity
-            android:name="com.centerorbit.hive_daq.InspectHive"
+            android:name=".VisitColony"
             android:label="@string/title_activity_inspect_hive" >
         </activity>
         <activity
-            android:name="com.centerorbit.hive_daq.NewColony"
+            android:name=".CreateColony"
             android:label="@string/title_activity_inspect_hive" >
         </activity>
         <activity
-            android:name="com.centerorbit.hive_daq.Queen"
+            android:name=".QueenEval"
             android:label="@string/title_activity_queen" >
         </activity>
         <activity
@@ -48,6 +48,12 @@
         <activity
             android:name=".Disease"
             android:label="disease_menu" />
+        <activity
+            android:name=".Management"
+            android:label="Managment" />
+        <activity
+            android:name=".Equipment"
+            android:label="equipment" />
 
     </application>
 

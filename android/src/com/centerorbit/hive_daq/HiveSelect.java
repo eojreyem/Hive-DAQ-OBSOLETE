@@ -65,7 +65,7 @@ public class HiveSelect extends Activity {
                                 Toast.makeText(getApplicationContext(),
                                         "Resume "+selectedFromList, Toast.LENGTH_SHORT)
                                         .show();
-                                Intent intent = new Intent(that, InspectHive.class);
+                                Intent intent = new Intent(that, VisitColony.class);
                                 startActivity(intent);
                             }
                         })
@@ -74,7 +74,7 @@ public class HiveSelect extends Activity {
                                 Toast.makeText(getApplicationContext(),
                                         "New session "+selectedFromList, Toast.LENGTH_SHORT)
                                         .show();
-                                Intent intent = new Intent(that, InspectHive.class);
+                                Intent intent = new Intent(that, VisitColony.class);
                                 startActivity(intent);
                             }
                         });

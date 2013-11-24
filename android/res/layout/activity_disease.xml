@@ -1,7 +1,7 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:columnCount="5" >
+    android:columnCount="3" >
 
     <TextView
         android:id="@+id/text_hive_type_number"
@@ -14,7 +14,7 @@
     <ToggleButton
         android:id="@+id/toggle_sacbrood"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="1"
         android:textOff="Sacbrood"
         android:textOn="Sacbrood" />
@@ -22,7 +22,7 @@
     <ToggleButton
         android:id="@+id/toggle_afb"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="2"
         android:textOff="AFB"
         android:textOn="AFB" />
@@ -30,7 +30,7 @@
     <ToggleButton
         android:id="@+id/toggle_efb"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="3"
         android:textOff="EFB"
         android:textOn="EFB" />
@@ -38,7 +38,7 @@
     <ToggleButton
         android:id="@+id/toggle_chalkbrood"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="4"
         android:textOff="Chalkbrood"
         android:textOn="Chalkbrood" />
@@ -46,7 +46,7 @@
     <ToggleButton
         android:id="@+id/toggle_dwv"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="5"
         android:textOff="DWV"
         android:textOn="DWV" />
@@ -54,7 +54,7 @@
     <ToggleButton
         android:id="@+id/toggle_odor"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="1"
         android:textOff="Odor"
         android:textOn="Odor" />
@@ -62,7 +62,7 @@
     <ToggleButton
         android:id="@+id/toggle_hive_beetles"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="2"
         android:textOff="Hive Beetles"
         android:textOn="Hive Beetles" />
@@ -70,7 +70,7 @@
     <ToggleButton
         android:id="@+id/toggle_pms"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="3"
         android:textOff="PMS"
         android:textOn="PMS" />
@@ -78,7 +78,7 @@
     <ToggleButton
         android:id="@+id/toggle_crud"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="4"
         android:textOff="Crud"
         android:textOn="Crud" />
@@ -86,7 +86,7 @@
     <ToggleButton
         android:id="@+id/toggle_wax_moths"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="5"
         android:textOff="Wax Moths"
         android:textOn="Wax Moths" />
@@ -94,7 +94,7 @@
     <ToggleButton
         android:id="@+id/toggle_nosema"
         android:layout_column="2"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="1"
         android:textOff="Nosema"
         android:textOn="Nosema" />
@@ -107,7 +107,7 @@
         android:id="@+id/bt_hygienic_test"
         android:layout_width="100dp"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="8"
         android:text="Hygienic Test" />
 
@@ -115,7 +115,7 @@
         android:id="@+id/bt_varroa_test"
         android:layout_width="100dp"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="8"
         android:text="Varroa Test" />
 
@@ -123,14 +123,14 @@
         android:id="@+id/bt_treatment"
         android:layout_width="100dp"
         android:layout_column="2"
-        android:layout_gravity="center"
+        android:layout_gravity="fill"
         android:layout_row="8"
         android:text="Treatment" />
 
     <Button
         android:id="@+id/bt_note"
         android:layout_width="100dp"
-        android:layout_column="0"
+        android:layout_column="2"
         android:layout_gravity="center"
         android:layout_row="9"
         android:text="Note" />

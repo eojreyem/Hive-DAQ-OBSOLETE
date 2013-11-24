@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class Main extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
     /** Called when the user clicks the "Create New" */
     public void newColony(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, NewColony.class);
+        Intent intent = new Intent(this, CreateColony.class);
         startActivity(intent);
     }
 

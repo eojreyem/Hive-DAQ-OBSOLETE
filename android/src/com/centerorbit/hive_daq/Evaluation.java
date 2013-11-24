@@ -11,7 +11,7 @@ public class Evaluation extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_evaluation);
+		setContentView(R.layout.activity_eval);
 	}
 
 	@Override
@@ -22,8 +22,8 @@ public class Evaluation extends Activity {
 	}
 
     public void Queen_menu(View view) {
-        Toast.makeText(this.getApplicationContext(), "Open Queen Menu", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Queen.class);
+        Toast.makeText(this.getApplicationContext(), "Open QueenEval Menu", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, QueenEval.class);
         startActivity(intent);
     }
 
