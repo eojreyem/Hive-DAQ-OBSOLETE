@@ -10,7 +10,5 @@ This software will feature:
 
 View Wiki to see a detailed project outline and goals.
 
-Planning of UX was taking place on this google spreadsheet:
-https://docs.google.com/spreadsheet/ccc?key=0Ahh5LiGPg40XdDMwdUxBTGZlUVBlZWhfc1NELV9IdHc&usp=sharing
-Please message me for access to edit.
-Joe is in the process of moving that information into the code, comments, and wiki.
+Planning of UI, UX, and database is taking place in a google spreadsheet.
+Please message me for access.
