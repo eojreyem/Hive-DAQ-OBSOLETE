@@ -42,7 +42,7 @@ public class CreateColony extends Activity {
         2. Store in DB
         3. Change activities.
          */
-        EditText newColonyName = (EditText) findViewById(R.id.new_colony_name);
+        EditText newColonyName = (EditText) findViewById(R.id.edit_text_number);
 
 
         datasource.Colony().create(newColonyName.getText().toString());

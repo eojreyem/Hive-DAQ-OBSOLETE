@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_hive_number"
+        android:layout_gravity="center"
+        android:text="Colony Number"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/text_view_note"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter Note:"
+        android:id="@+id/text_view_note"
+        android:layout_below="@+id/text_hive_number"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/bt_save_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:width="100dp"
+        android:height="70dp"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Reminder ON"
+        android:textOff="Reminder OFF"
+        android:id="@+id/tb_reminder"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:width="100dp"
+        android:height="70dp"
+        android:checked="false" />
+
+
+</RelativeLayout>

@@ -1,125 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Yard:"
+        android:id="@+id/text_view_yard"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true" />
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_yard"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/text_view_yard"
+        android:layout_toRightOf="@+id/text_view_yard" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Yard:"
-            android:id="@+id/textView"
-            android:layout_gravity="right"
-            android:layout_row="0"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Number:"
+        android:id="@+id/text_view_number"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_view_yard"
+        android:layout_alignLeft="@+id/text_view_yard" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_colony_yard"
-            android:layout_gravity="center"
-            android:width="200dp"
-            android:layout_row="0"
-            android:layout_column="1" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_number"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_view_number"
+        android:layout_toRightOf="@+id/text_view_number" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Number:"
-            android:id="@+id/textView"
-            android:layout_gravity="right"
-            android:layout_row="2"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Created:"
+        android:id="@+id/text_view_created"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_view_number"
+        android:layout_alignLeft="@+id/text_view_number" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_colony_number"
-            android:layout_gravity="center"
-            android:width="200dp"
-            android:layout_row="2"
-            android:layout_column="1" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_created"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_view_created"
+        android:layout_toRightOf="@+id/text_view_created" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Type:"
-            android:id="@+id/textView"
-            android:layout_gravity="right"
-            android:layout_row="3"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="From a:"
+        android:id="@+id/text_view_from"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_view_created"
+        android:layout_alignLeft="@+id/text_view_created" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_colony_type"
-            android:layout_gravity="center"
-            android:width="200dp"
-            android:layout_row="3"
-            android:layout_column="1" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_from"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_view_from"
+        android:layout_toRightOf="@+id/text_view_from" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Name:"
-            android:id="@+id/textView"
-            android:layout_gravity="right"
-            android:layout_row="4"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Source:"
+        android:id="@+id/text_view_source"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_view_from"
+        android:layout_alignLeft="@+id/text_view_from" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_source"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_view_source"
+        android:layout_toRightOf="@+id/text_view_source" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hived in:"
+        android:id="@+id/text_view_hive"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_view_source"
+        android:layout_alignLeft="@+id/text_view_source" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_hive"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_view_hive"
+        android:layout_toRightOf="@+id/text_view_hive" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:width="100dp"
+        android:height="70dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Colony"
+        android:id="@+id/button_create"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="create"
+        android:width="150dp"
+        android:height="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Scan an NFC tag"
+        android:id="@+id/textView"
+        android:layout_marginRight="10dp"
+        android:textColor="#800000"
+        android:layout_above="@+id/button_create"
+        android:layout_alignParentRight="true" />
 
 
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_colony_name"
-            android:layout_gravity="center_horizontal"
-            android:width="200dp"
-            android:layout_row="4"
-            android:layout_column="1" />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Date Created:"
-            android:id="@+id/textView"
-            android:layout_gravity="right"
-            android:layout_row="5"
-            android:layout_column="0" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_row="5"
-            android:layout_column="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create Colony"
-            android:id="@+id/new_colony"
-            android:onClick="create"
-            android:layout_gravity="bottom"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:layout_columnSpan="2"
-            />
-
-
-    </GridLayout>
-</LinearLayout>
+</RelativeLayout>

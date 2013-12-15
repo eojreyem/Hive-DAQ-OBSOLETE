@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Toast;
 
 /**
- * Created by joe on 11/20/13.
+ * Created by joe on 12/14/13.
  */
-public class Disease extends Activity {
+public class Evaluation2 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_disease);
+        setContentView(R.layout.activity_eval2);
     }
 
     public void Take_note(View view) {

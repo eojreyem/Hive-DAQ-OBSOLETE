@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_new_queen"
+        android:layout_gravity="center"
+        android:text="New Queen"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Number:"
+        android:id="@+id/text_queen_number"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/text_new_queen"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_queen_number"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/text_queen_number"
+        android:layout_toRightOf="@+id/text_queen_number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="In Colony:"
+        android:id="@+id/text_in_colony"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_queen_number"
+        android:layout_alignLeft="@+id/text_queen_number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_colony"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_in_colony"
+        android:layout_toRightOf="@+id/text_in_colony" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Source:"
+        android:id="@+id/text_source"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_in_colony"
+        android:layout_alignLeft="@+id/text_in_colony" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:text="Mother"
+        android:id="@+id/bt_mother"
+        android:layout_alignTop="@+id/text_source"
+        android:layout_toRightOf="@+id/text_source" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:width="140dp"
+        android:id="@+id/bt_other_source"
+        android:layout_alignTop="@+id/bt_mother"
+        android:layout_toRightOf="@+id/bt_mother" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Race:"
+        android:id="@+id/text_race"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_source"
+        android:layout_alignLeft="@+id/text_source" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_race"
+        android:width="200dp"
+        android:layout_alignBottom="@+id/text_race"
+        android:layout_toRightOf="@+id/text_race" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Emerge date within 2 weeks of today?"
+        android:id="@+id/text_emerge_created"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/text_race"
+        android:layout_alignLeft="@+id/text_race" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="No"
+        android:textOn="Yes"
+        android:id="@+id/toggle_emerge_create"
+        android:layout_alignBottom="@+id/text_emerge_created"
+        android:layout_toRightOf="@+id/text_emerge_created" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark"
+        android:layout_marginTop="20dp"
+        android:width="100dp"
+        android:id="@+id/bt_mark"
+        android:layout_below="@+id/text_emerge_created"
+        android:layout_alignLeft="@+id/text_emerge_created" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:width="100dp"
+        android:height="70dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Queen"
+        android:id="@+id/button_create"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:width="150dp"
+        android:height="70dp" />
+
+</RelativeLayout>

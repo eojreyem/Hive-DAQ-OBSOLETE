@@ -1,204 +1,164 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:columnCount="3"
-    android:orientation="horizontal" >
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queen Number"
+        android:id="@+id/bt_queen_number"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="QueenDetails"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Seen"
+        android:textOff="Seen"
+        android:id="@+id/toggle_seen"
+        android:width="110dp"
+        android:height="65dp"
+        android:onClick="QueenSeen"
+        android:layout_below="@+id/text_view_is"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Seen"
+        android:id="@+id/bt_not_seen"
+        android:width="110dp"
+        android:height="65dp"
+        android:layout_below="@+id/toggle_seen"
+        android:layout_alignLeft="@+id/toggle_seen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Found"
+        android:id="@+id/bt_not_found"
+        android:width="110dp"
+        android:height="65dp"
+        android:layout_below="@+id/bt_not_seen"
+        android:layout_alignLeft="@+id/bt_not_seen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gone"
+        android:id="@+id/bt_gone"
+        android:width="110dp"
+        android:height="65dp"
+        android:layout_below="@+id/bt_not_found"
+        android:layout_alignLeft="@+id/bt_not_found" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="110dp"
+        android:height="65dp"
+        android:text="Different Queen"
+        android:onClick="CreateQueen"
+        android:id="@+id/bt_new_queen_seen"
+        android:layout_below="@+id/bt_gone"
+        android:layout_alignLeft="@+id/bt_gone" />
 
     <TextView
-        android:id="@+id/text_colony_type_number"
-        android:layout_column="1"
-        android:layout_gravity="center"
-        android:layout_row="0"
-        android:text="Hive 203"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/bt_queen_details"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="left|top"
-        android:layout_row="1"
-        android:text="Queen # Details" />
-
-    <TextView
-        android:id="@+id/text_last_status"
-        android:layout_column="0"
-        android:layout_gravity="right|center_vertical"
-        android:layout_row="1"
-        android:text="Last Status:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <!-- Column 1, Actions -->
-
-    <TextView
-        android:id="@+id/text_queen_actions"
-        android:layout_column="0"
-        android:layout_gravity="center"
-        android:layout_row="2"
-        android:text="Actions"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="IS"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/text_view_is"
+        android:layout_below="@+id/bt_queen_number"
+        android:layout_alignParentLeft="true" />
 
     <Button
-        android:id="@+id/bt_move"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="center"
-        android:layout_row="4"
-        android:text="Move" />
-
-    <!-- Column 2, Unseen -->
-
-    <TextView
-        android:id="@+id/text_queen_unseen"
-        android:layout_column="1"
-        android:layout_gravity="center"
-        android:layout_row="2"
-        android:text="Unseen"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="Queen Cells"
+        android:id="@+id/bt_queen_cells"
+        android:width="110dp"
+        android:height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
 
     <Button
-        android:id="@+id/bt_queenless"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="center"
-        android:layout_row="4"
-        android:text="Queenless" />
-
-    <!-- Column 3, Seen -->
-
-    <TextView
-        android:id="@+id/text_queen_seen"
-        android:layout_column="2"
-        android:layout_gravity="center"
-        android:layout_row="2"
-        android:text="Seen"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/bt_unmarked"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="center"
-        android:layout_row="4"
-        android:text="Unmarked" />
-
-
-
-    <Button
-        android:id="@+id/bt_kill"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="left|top"
-        android:layout_row="6"
-        android:text="Kill" />
-
-    <Button
-        android:id="@+id/bt_queen_not_found"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="left|top"
-        android:layout_row="6"
-        android:text="Not Found" />
-
-    <Button
-        android:id="@+id/bt_virgins"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="left|top"
-        android:layout_row="6"
-        android:text="Virgin(s)" />
-
-    <Button
-        android:id="@+id/bt_confine"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="left|top"
-        android:layout_row="5"
-        android:text="Confine" />
-
-    <Button
+        android:text="Laying Workers"
+        android:width="110dp"
+        android:height="65dp"
         android:id="@+id/bt_laying_workers"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="left|top"
-        android:layout_row="5"
-        android:text="Laying Workers" />
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/bt_queen_cells" />
 
     <Button
-        android:id="@+id/bt_drone_layer"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="left|center_vertical"
-        android:layout_row="5"
-        android:text="Drone Layer" />
-
-    <Button
-        android:id="@+id/bt_mark"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="left|top"
-        android:layout_row="3"
-        android:text="Mark" />
-
-    <Button
-        android:id="@+id/bt_queenright"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="left|top"
-        android:layout_row="3"
-        android:text="Queen-Right" />
-
-    <Button
-        android:id="@+id/bt_marked"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_gravity="left|top"
-        android:layout_row="3"
-        android:text="Marked" />
-
-    <TextView
-        android:id="@+id/text_introduce"
-        android:layout_column="0"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_row="7"
         android:text="Introduce"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:width="110dp"
+        android:height="65dp"
+        android:id="@+id/bt_introduce"
+        android:layout_below="@+id/bt_sell_queen"
+        android:layout_toRightOf="@+id/bt_gone" />
 
     <Button
-        android:id="@+id/bt_existing_queen"
-        android:layout_width="130dp"
-        android:layout_column="0"
-        android:layout_gravity="left|top"
-        android:layout_row="8"
-        android:text="Existing Queen" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="Take_note"
+        android:width="100dp"
+        android:height="70dp"/>
 
     <Button
-        android:id="@+id/bt_new_queen"
-        android:layout_width="130dp"
-        android:layout_column="1"
-        android:layout_gravity="left|top"
-        android:layout_row="8"
-        android:text="New Queen" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confine"
+        android:id="@+id/bt_confine"
+        android:width="110dp"
+        android:height="65dp"
+        android:visibility="invisible"
+        android:layout_below="@id/text_view_is"
+        android:layout_toRightOf="@+id/toggle_seen" />
 
     <Button
-        android:id="@+id/bt_note"
-        android:layout_width="130dp"
-        android:layout_column="2"
-        android:layout_gravity="center"
-        android:layout_row="9"
-        android:text="Note" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move"
+        android:width="110dp"
+        android:height="65dp"
+        android:visibility="invisible"
+        android:id="@+id/bt_move_queen"
+        android:layout_below="@+id/bt_confine"
+        android:layout_toRightOf="@+id/toggle_seen" />
 
-</GridLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kill"
+        android:visibility="invisible"
+        android:width="110dp"
+        android:height="65dp"
+        android:id="@+id/bt_kill_queen"
+        android:layout_below="@+id/bt_move_queen"
+        android:layout_toRightOf="@+id/bt_not_seen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sell"
+        android:visibility="invisible"
+        android:width="110dp"
+        android:height="65dp"
+        android:id="@+id/bt_sell_queen"
+        android:layout_below="@+id/bt_kill_queen"
+        android:layout_toRightOf="@+id/bt_not_found" />
+
+</RelativeLayout>

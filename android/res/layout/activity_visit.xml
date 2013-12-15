@@ -1,119 +1,122 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:columnCount="3" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- String representing hive type and # -->
+
+
+
+    <Button
+        android:id="@+id/bt_colony_details"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:onClick="ColonyDetails"
+        android:text="Colony Number"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 
     <TextView
-        android:id="@+id/text_colony_type_number"
-        android:layout_column="1"
-        android:layout_row="1"
-        android:layout_gravity="center"
-        android:text="Hive 103"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/text_last_visit"
-        android:layout_column="0"
-        android:layout_row="2"
-        android:layout_gravity="center"
+        android:id="@+id/text_last_visited"
         android:text="Last Visited"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_colony_details"
+        android:layout_toLeftOf="@+id/bt_colony_details" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_column="0"
+        android:id="@+id/text_view_lastvisit"
         android:layout_gravity="center"
-        android:layout_row="6"
         android:text="June 5, 2013"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_last_visited"
+        android:layout_alignLeft="@+id/text_last_visited" />
 
     <TextView
         android:id="@+id/text_current_visit"
-        android:layout_column="2"
         android:layout_gravity="center"
-        android:layout_row="2"
         android:text="Current Visit"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_colony_details"
+        android:layout_toRightOf="@+id/bt_colony_details" />
 
     <Button
         android:id="@+id/bt_queen"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="10"
         android:onClick="Queen_menu"
-        android:text="Queen" />
+        android:text="Queen"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/bt_colony_details"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/bt_evaluate"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="11"
         android:onClick="Evaluation"
-        android:text="Evaluate" />
+        android:text="Evaluate"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/bt_queen"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/bt_disease"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="12"
         android:onClick="Disease"
-        android:text="Disease"/>
-
-    <Button
-        android:id="@+id/bt_equipment"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="13"
-        android:onClick="Equipment"
-        android:text="Equipment" />
+        android:text="Disease and Pests"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/bt_evaluate"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/bt_managment"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="14"
         android:onClick="Management"
-        android:text="Managment" />
+        android:text="Managment"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/bt_disease"
+        android:layout_centerHorizontal="true" />
 
-    <!-- note taking buttons in bottom row. -->
-
-    <Button
-        android:id="@+id/bt_voicenote"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="2"
-        android:layout_row="19"
-        android:text="Voice Note" />
 
     <Button
-        android:id="@+id/bt_textnote"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="19"
-        android:text="Text Note" />
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="Take_note"
+        android:width="100dp"
+        android:height="70dp"/>
 
     <Button
         android:id="@+id/bt_camera"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="19"
-        android:text="Camera" />
+        android:onClick="Camera"
+        android:text="Camera"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_note"
+        android:height="70dp"
+        android:width="100dp" />
 
     <Button
         android:id="@+id/bt_end_visit"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="17"
-        android:text="Close Visit" />
+        android:text="End Visit"
+        android:layout_below="@+id/bt_managment"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp" />
 
-</GridLayout>
+</RelativeLayout>

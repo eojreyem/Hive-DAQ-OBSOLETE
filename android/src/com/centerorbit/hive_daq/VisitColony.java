@@ -74,10 +74,24 @@ implements WeatherInterface {
         startActivity(intent);
     }
 
-    public void Equipment(View view) {
-        Toast.makeText(this.getApplicationContext(), "Open Equipment Menu", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Equipment.class);
+    public void ColonyDetails(View view) {
+        Toast.makeText(this.getApplicationContext(), "Open Colony Details", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ColonyDetail.class);
         startActivity(intent);
     }
+
+    public void Camera(View view) {
+        Toast.makeText(this.getApplicationContext(), "Take a picture", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+
+        startActivityForResult(intent, 0);
+    }
+
+    public void Take_note(View view) {
+        Toast.makeText(this.getApplicationContext(), "Take a Note", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, VisitNote.class);
+        startActivity(intent);
+    }
+
  
 }

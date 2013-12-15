@@ -1,128 +1,240 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Evaluation" >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <GridLayout
-        android:id="@+id/gridLayout1"
+    <TextView
+        android:id="@+id/text_hive_number"
+        android:layout_gravity="center"
+        android:text="Colony Number"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_frames_of_bees"
+        android:text="Frames Of Bees:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/text_hive_number"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true" />
+
+
+    <EditText
+        android:id="@+id/edit_text_fobees"
+        android:layout_width="80dp"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/text_frames_of_bees"
+        android:layout_toRightOf="@+id/text_frames_of_bees"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_frames_of_brood"
+        android:text="Frames Of Brood:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_frames_of_bees"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/edit_text_fobrood"
+        android:layout_width="80dp"
+        android:layout_column="1"
+        android:layout_gravity="left"
+        android:layout_row="1"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/text_frames_of_brood"
+        android:layout_toRightOf="@+id/text_frames_of_brood"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_brood_pattern"
+        android:text="Brood Pattern"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_frames_of_brood"
+        android:layout_alignParentLeft="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_brood"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_brood_pattern"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Temperment"
+        android:id="@+id/text_view_temperment"
+        android:layout_below="@+id/ratingBar_brood"
+        android:layout_alignParentLeft="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calm"
+        android:width="100dp"
+        android:id="@+id/bt_calm"
+        android:layout_below="@+id/text_view_temperment"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nervous"
+        android:width="100dp"
+        android:id="@+id/bt_nervous"
+        android:layout_below="@+id/text_view_temperment"
+        android:layout_toRightOf="@+id/bt_calm" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean"
+        android:width="100dp"
+        android:id="@+id/bt_mean"
+        android:layout_alignTop="@+id/bt_nervous"
+        android:layout_toRightOf="@+id/bt_nervous" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Brood in all stages?"
+        android:id="@+id/text_view_brood_stages"
+        android:layout_below="@+id/bt_calm"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:width="100dp"
+        android:id="@+id/bt_brood_all_stage_yes"
+        android:layout_alignTop="@+id/toggle_eggs"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:width="100dp"
+        android:id="@+id/bt_brood_all_stage_no"
+        android:onClick="Brood_all_stages_no"
+        android:layout_below="@id/text_view_brood_stages"
+        android:layout_toRightOf="@+id/bt_brood_all_stage_yes" />
+
+    <!-- make the following toggles visible when no is chosen)
+    -->
+
+    <ToggleButton
+        android:id="@+id/toggle_eggs"
+        android:textOff="No Eggs"
+        android:textOn="Eggs"
+        android:checked="false"
+        android:width="100dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/text_view_brood_stages"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:columnCount="3" >
+        android:layout_width="wrap_content" />
 
-        <TextView
-            android:id="@+id/text_frames_of_bees"
-            android:layout_column="0"
-            android:layout_gravity="right"
-            android:layout_row="0"
-            android:text="F.O.Bees:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <ToggleButton
+        android:id="@+id/toggle_larvae"
+        android:textOff="No Larvae"
+        android:textOn="Larvae"
+        android:checked="false"
+        android:width="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/text_view_brood_stages"
+        android:layout_toRightOf="@+id/toggle_eggs" />
 
-        <EditText
-            android:id="@+id/edit_text_fobees"
-            android:layout_width="80dp"
-            android:layout_column="1"
-            android:layout_gravity="left"
-            android:layout_row="0"
-            android:ems="10"
-            android:inputType="number" />
+    <ToggleButton
+        android:id="@+id/toggle_pupae"
+        android:textOff="No Capped"
+        android:textOn="Capped"
+        android:width="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/text_view_brood_stages"
+        android:layout_toRightOf="@+id/toggle_larvae" />
 
-        <TextView
-            android:id="@+id/text_frames_of_brood"
-            android:layout_column="0"
-            android:layout_gravity="right"
-            android:layout_row="1"
-            android:text="F.O.Brood:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:id="@+id/bt_cancel_brood"
+        android:visibility="invisible"
+        android:layout_below="@+id/text_view_brood_stages"
+        android:layout_toRightOf="@+id/toggle_pupae"
+        android:onClick="Brood_all_stages_cancel"/>
 
-        <EditText
-            android:id="@+id/edit_text_fobrood"
-            android:layout_width="80dp"
-            android:layout_column="1"
-            android:layout_gravity="left"
-            android:layout_row="1"
-            android:ems="10"
-            android:inputType="number" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bearding"
+        android:id="@+id/text_view_bearding"
+        android:layout_below="@+id/bt_brood_all_stage_yes"
+        android:layout_alignParentLeft="true" />
 
-        <TextView
-            android:id="@+id/text_colony_weight"
-            android:layout_column="0"
-            android:layout_gravity="right"
-            android:layout_row="2"
-            android:text="Weight:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:width="100dp"
+        android:id="@+id/bt_bearding_yes"
+    android:layout_below="@+id/text_view_bearding"
+            android:layout_alignParentLeft="true" />
 
-        <EditText
-            android:id="@+id/edit_text_colony_weight"
-            android:layout_width="80dp"
-            android:layout_column="1"
-            android:layout_gravity="left"
-            android:layout_row="2"
-            android:ems="10"
-            android:inputType="number" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:width="100dp"
+        android:id="@+id/bt_bearding_no"
+    android:layout_below="@+id/text_view_bearding"
+            android:layout_toRightOf="@+id/bt_bearding_yes" />
 
-        <ToggleButton
-            android:id="@+id/toggle_eggs"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:layout_row="4"
-            android:textOff="Eggs" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="Take_note"
+        android:width="100dp"
+        android:height="70dp"/>
 
-        <ToggleButton
-            android:id="@+id/toggle_larvae"
-            android:layout_column="1"
-            android:layout_gravity="center"
-            android:layout_row="4"
-            android:textOff="Larvae" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page 2"
+        android:id="@+id/bt_page2"
+        android:width="100dp"
+        android:height="70dp"
+        android:onClick="Open_Eval2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
 
-        <ToggleButton
-            android:id="@+id/toggle_pupae"
-            android:layout_column="2"
-            android:layout_gravity="center"
-            android:layout_row="4"
-            android:textOff="Pupae" />
-
-        <Button
-            android:id="@+id/bt_disease_menu"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:layout_row="5"
-            android:onClick="Disease"
-            android:text="Disease"/>
-
-        <Button
-            android:id="@+id/bt_queen_menu"
-            android:layout_column="1"
-            android:layout_gravity="center"
-            android:layout_row="5"
-            android:onClick="Queen_menu"
-            android:text="Queen" />
-
-
-        <RatingBar
-            android:id="@+id/ratingBar1"
-            android:layout_column="1"
-            android:layout_gravity="left"
-            android:layout_row="3"
-            android:layout_columnSpan="2" />
-
-        <TextView
-            android:id="@+id/text_brood_pattern"
-            android:layout_width="80dp"
-            android:layout_column="0"
-            android:layout_gravity="right"
-            android:layout_row="3"
-            android:text="Brood Pattern"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    </GridLayout>
 
 </RelativeLayout>

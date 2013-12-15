@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_colony_number"
+        android:layout_gravity="center"
+        android:text="Colony Number"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_weight"
+        android:text="Weight:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_text_weight"
+        android:layout_toLeftOf="@+id/edit_text_weight" />
+
+    <EditText
+        android:id="@+id/edit_text_weight"
+        android:layout_width="80dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_note"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/text_in_hive"
+        android:text="Rate the qty in the brood chamber"
+        android:textStyle="italic"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_colony_number"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/text_pollen"
+        android:text="Pollen:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/text_in_hive"
+        android:layout_alignParentLeft="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_pollen"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_pollen"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/text_nectar"
+        android:text="Nectar:"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ratingBar_pollen"
+        android:layout_alignParentLeft="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_nectar"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_nectar"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/text_honey"
+        android:text="Honey:"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ratingBar_nectar"
+        android:layout_alignParentLeft="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_honey"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_honey"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/text_brood_food"
+        android:text="Brood Food:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/ratingBar_brood_food"
+        android:layout_alignLeft="@+id/ratingBar_brood_food" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_brood_food"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/ratingBar_pollen"
+        android:layout_toRightOf="@+id/ratingBar_pollen" />
+
+    <TextView
+        android:id="@+id/text_propolis"
+        android:text="Propolis:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/ratingBar_propolis"
+        android:layout_alignLeft="@+id/ratingBar_propolis" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_propolis"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/ratingBar_nectar"
+        android:layout_toRightOf="@+id/ratingBar_nectar" />
+
+    <TextView
+        android:id="@+id/text_drone_brood"
+        android:text="Drone Brood:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/ratingBar_drone_brood"
+        android:layout_alignLeft="@+id/ratingBar_drone_brood" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_drone_brood"
+        android:numStars="3"
+        android:stepSize="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/ratingBar_honey"
+        android:layout_toRightOf="@+id/ratingBar_honey" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="Take_note"
+        android:width="100dp"
+        android:height="70dp"/>
+
+
+
+</RelativeLayout>
