@@ -2,7 +2,9 @@
 <RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="15dp"
+    android:focusable="false">
 
     <TextView
         android:id="@+id/text_hive_number"
@@ -19,26 +21,261 @@
         android:layout_height="wrap_content"
         android:text="Hive Type"
         android:id="@+id/bt_change_hive_type"
+        android:onClick="ChangeHiveType"
         android:layout_below="@+id/text_hive_number"
         android:layout_centerHorizontal="true" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_change_hive_type"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Supers"
+                android:gravity="right"
+                android:id="@+id/label_supers"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:width="80dp"
+                android:onClick="RemoveSuper"
+                android:id="@+id/bt_remove_super"
+                android:textSize="32sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:width="80dp"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_text_super"
+                android:clickable="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:onClick="AddSuper"
+                android:width="80dp"
+                android:id="@+id/bt_super_added"
+                android:textSize="32sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Deeps"
+                android:gravity="right"
+                android:id="@+id/label_deeps"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:width="80dp"
+                android:id="@+id/bt_remove_deep"
+                android:onClick="RemoveDeep"
+                android:textSize="32sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:width="80dp"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_text_deep" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:width="80dp"
+                android:onClick="AddDeep"
+                android:id="@+id/bt_deep_added"
+                android:textSize="32sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Food"
+                android:gravity="right"
+                android:id="@+id/label_Food"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:width="80dp"
+                android:onClick="RemoveFood"
+                android:id="@+id/bt_remove_food"
+                android:textSize="32sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:width="80dp"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_text_food" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:width="80dp"
+                android:onClick="AddFood"
+                android:id="@+id/bt_food_added"
+                android:textSize="32sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Brood"
+                android:gravity="right"
+                android:id="@+id/label_brood"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:width="80dp"
+                android:onClick="RemoveBrood"
+                android:id="@+id/bt_remove_brood"
+                android:textSize="32sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:width="80dp"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_text_brood" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:width="80dp"
+                android:onClick="AddBrood"
+                android:textSize="32sp"
+                android:id="@+id/bt_brood_added" />
+
+        </TableRow>
+
+
+    </TableLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Supers"
-        android:id="@+id/text_view_supers"
-        android:layout_below="@+id/bt_change_hive_type"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Colony"
+        android:gravity="right"
+        android:layout_marginTop="15dp"
+        android:id="@+id/label_colony"
+        android:layout_below="@+id/tableLayout"
         android:layout_alignParentLeft="true" />
 
-    <NumberPicker
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/num_pic_supers"
-        android:layout_below="@+id/text_view_supers"
+        android:text="Divide"
+        android:width="120dp"
+        android:id="@+id/bt_divide"
+        android:onClick="DivdeColony"
+        android:layout_below="@+id/tableLayout"
+        android:layout_toRightOf="@+id/label_colony" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combine"
+        android:onClick="CombineColony"
+        android:width="120dp"
+        android:id="@+id/bt_combine"
+        android:layout_below="@+id/tableLayout"
+        android:layout_toRightOf="@+id/bt_divide" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pollen/Sub"
+        android:width="120dp"
+        android:id="@+id/bt_pollen_sub"
+        android:layout_below="@+id/bt_divide"
+        android:layout_toRightOf="@+id/label_colony" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Feed"
+        android:gravity="right"
+        android:layout_marginTop="15dp"
+        android:id="@+id/label_feed"
+        android:layout_below="@+id/bt_divide"
+        android:layout_toLeftOf="@id/bt_pollen_sub"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Syrup"
+        android:width="120dp"
+        android:id="@+id/bt_syrup"
+        android:layout_below="@+id/bt_divide"
+        android:layout_toRightOf="@+id/bt_divide" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="120dp"
+        android:text="Reversal/Reorder"
+        android:id="@+id/bt_reversal_move_frames"
+        android:layout_below="@+id/bt_syrup"
+        android:layout_toRightOf="@+id/bt_pollen_sub" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/button_note"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:orientation="horizontal"
-        android:layoutMode="opticalBounds" />
+        android:onClick="Take_note"
+        android:width="100dp"
+        android:height="70dp"/>
+
 
 
 </RelativeLayout>

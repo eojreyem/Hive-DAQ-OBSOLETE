@@ -13,6 +13,241 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/text_view_number"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hive Type: "
+                android:id="@+id/label_hive_type"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="type"
+                android:id="@+id/text_hive_type"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Last Visited: "
+                android:id="@+id/label_last_visited"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="MM/DD/YY"
+                android:id="@+id/text_last_visited"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Queen Status: "
+                android:id="@+id/label_queen_status"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="status"
+                android:id="@+id/text_queen_status"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Queen: "
+                android:id="@+id/label_queen"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="queen#"
+                android:id="@+id/text_queen_number"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Date created: "
+                android:id="@+id/label_date_created"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="MM/DD/YY"
+                android:id="@+id/text_date_created"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Yard: "
+                android:id="@+id/label_yard"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="yard"
+                android:id="@+id/text_yard"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Source: "
+                android:id="@+id/label_source"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="source"
+                android:id="@+id/text_source"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Details: "
+                android:id="@+id/label_details"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="source detail"
+                android:id="@+id/text_source_detail"
+                android:layout_column="2" />
+        </TableRow>
+
+    </TableLayout>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a note from the creation of this colony"
+        android:id="@+id/text_note"
+        android:layout_below="@+id/tableLayout"
+        android:editable="false"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replace NFC Tag"
+        android:id="@+id/bt_replace_nfc"
+        android:width="120dp"
+        android:layout_below="@+id/text_note"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Colony"
+        android:id="@+id/bt_delete_colony"
+        android:width="120dp"
+        android:layout_below="@+id/bt_replace_nfc"
+        android:layout_alignParentRight="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_past_visits"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/label_past_visits"
+        android:layout_toLeftOf="@id/bt_replace_nfc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Past Visits"
+        android:id="@+id/label_past_visits"
+        android:layout_below="@+id/text_note"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

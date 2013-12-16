@@ -18,7 +18,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_note"
         android:layout_below="@+id/text_view_note"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" />
@@ -37,10 +37,11 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/bt_save_note"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:onClick="SaveNote"
         android:width="100dp"
-        android:height="70dp"/>
+        android:height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
@@ -48,11 +49,29 @@
         android:textOn="Reminder ON"
         android:textOff="Reminder OFF"
         android:id="@+id/tb_reminder"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:width="100dp"
         android:height="70dp"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_below="@+id/edit_text_note"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bring Deep"
+        android:id="@+id/bt_preset1"
+        android:onClick="Preset1"
+        android:layout_below="@+id/edit_text_note"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swarm watch"
+        android:id="@+id/bt_preset2"
+        android:onClick="Preset2"
+        android:layout_below="@+id/bt_preset1"
+        android:layout_alignParentLeft="true" />
 
 
 </RelativeLayout>

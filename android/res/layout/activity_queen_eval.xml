@@ -1,111 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent" android:layout_height="match_parent">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Queen Number"
         android:id="@+id/bt_queen_number"
+        android:onClick="QueenDetails"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:onClick="QueenDetails"/>
-
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOn="Seen"
-        android:textOff="Seen"
-        android:id="@+id/toggle_seen"
-        android:width="110dp"
-        android:height="65dp"
-        android:onClick="QueenSeen"
-        android:layout_below="@+id/text_view_is"
         android:layout_alignParentLeft="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Seen"
-        android:id="@+id/bt_not_seen"
-        android:width="110dp"
-        android:height="65dp"
-        android:layout_below="@+id/toggle_seen"
-        android:layout_alignLeft="@+id/toggle_seen" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Found"
-        android:id="@+id/bt_not_found"
-        android:width="110dp"
-        android:height="65dp"
-        android:layout_below="@+id/bt_not_seen"
-        android:layout_alignLeft="@+id/bt_not_seen" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gone"
-        android:id="@+id/bt_gone"
-        android:width="110dp"
-        android:height="65dp"
-        android:layout_below="@+id/bt_not_found"
-        android:layout_alignLeft="@+id/bt_not_found" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="110dp"
-        android:height="65dp"
-        android:text="Different Queen"
-        android:onClick="CreateQueen"
-        android:id="@+id/bt_new_queen_seen"
-        android:layout_below="@+id/bt_gone"
-        android:layout_alignLeft="@+id/bt_gone" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="IS"
-        android:layout_marginLeft="40dp"
         android:id="@+id/text_view_is"
-        android:layout_below="@+id/bt_queen_number"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignBottom="@+id/bt_queen_number"
+        android:layout_toRightOf="@+id/bt_queen_number" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Queen Cells"
-        android:id="@+id/bt_queen_cells"
-        android:width="110dp"
-        android:height="65dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bt_queen_number">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Laying Workers"
-        android:width="110dp"
-        android:height="65dp"
-        android:id="@+id/bt_laying_workers"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/bt_queen_cells" />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Seen"
+            android:textOff="Seen"
+            android:id="@+id/t_seen"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:height="70dp"
+            android:width="110dp"
+            android:onClick="QueenSeen"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Introduce"
-        android:width="110dp"
-        android:height="65dp"
-        android:id="@+id/bt_introduce"
-        android:layout_below="@+id/bt_sell_queen"
-        android:layout_toRightOf="@+id/bt_gone" />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Gone"
+            android:textOn="Gone"
+            android:id="@+id/t_gone"
+            android:onClick="QueenGone"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:height="70dp"
+            android:width="110dp" />
 
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Not Seen/ Not Found"
+            android:textOn="Not Seen/ Not Found"
+            android:onClick="QueenNotSeenFound"
+            android:id="@+id/t_not_seen_found"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:height="70dp"
+            android:width="110dp" />
+
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Remove"
+            android:textOn="Remove"
+            android:onClick="Remove"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:height="70dp"
+            android:width="110dp"
+            android:id="@+id/t_remove_queen" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Found"
+            android:id="@+id/bt_not_found"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:width="110dp"
+            android:height="70dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Seen"
+            android:id="@+id/bt_not_seen"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:width="110dp"
+            android:height="70dp" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Introduce"
+            android:textOn="Introduce"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="Introduce"
+            android:height="70dp"
+            android:width="110dp"
+            android:id="@+id/t_introduce" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confine"
+            android:id="@+id/bt_confine"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:width="110dp"
+            android:height="70dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Queen"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:height="70dp"
+            android:width="110dp"
+            android:onClick="CreateQueen"
+            android:id="@+id/bt_create_queen" />
+
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Queen Cells"
+            android:id="@+id/t_queen_cells"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="3"
+            android:layout_column="0"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kill"
+            android:id="@+id/bt_kill"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell"
+            android:id="@+id/bt_sell"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move"
+            android:id="@+id/bt_move"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="2"
+            android:layout_column="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laying Workers"
+            android:id="@+id/bt_laying_workers"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Queen Right"
+            android:textOn="Queen Right"
+            android:onClick="QueenRight"
+            android:id="@+id/t_queen_right"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Existing"
+            android:id="@+id/bt_existing"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Seen"
+            android:id="@+id/bt_not_seen2"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:height="70dp"
+            android:width="110dp" />
+
+
+
+
+    </GridLayout>
+
+<!--
+
+
+
+
+
+
+
+
+
+
+        -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,49 +239,5 @@ android:layout_width="match_parent" android:layout_height="match_parent">
         android:onClick="Take_note"
         android:width="100dp"
         android:height="70dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confine"
-        android:id="@+id/bt_confine"
-        android:width="110dp"
-        android:height="65dp"
-        android:visibility="invisible"
-        android:layout_below="@id/text_view_is"
-        android:layout_toRightOf="@+id/toggle_seen" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Move"
-        android:width="110dp"
-        android:height="65dp"
-        android:visibility="invisible"
-        android:id="@+id/bt_move_queen"
-        android:layout_below="@+id/bt_confine"
-        android:layout_toRightOf="@+id/toggle_seen" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kill"
-        android:visibility="invisible"
-        android:width="110dp"
-        android:height="65dp"
-        android:id="@+id/bt_kill_queen"
-        android:layout_below="@+id/bt_move_queen"
-        android:layout_toRightOf="@+id/bt_not_seen" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sell"
-        android:visibility="invisible"
-        android:width="110dp"
-        android:height="65dp"
-        android:id="@+id/bt_sell_queen"
-        android:layout_below="@+id/bt_kill_queen"
-        android:layout_toRightOf="@+id/bt_not_found" />
 
 </RelativeLayout>
