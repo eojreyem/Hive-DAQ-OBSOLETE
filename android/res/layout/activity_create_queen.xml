@@ -68,7 +68,7 @@
         android:width="100dp"
         android:text="Mother"
         android:id="@+id/bt_mother"
-        android:layout_alignTop="@+id/text_source"
+        android:layout_alignBottom="@+id/text_source"
         android:layout_toRightOf="@+id/text_source" />
 
     <Button
@@ -101,32 +101,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="200dp"
+        android:width="180dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Emerge date within 2 weeks of today?"
+        android:text="Emerged how many weeks ago?"
         android:id="@+id/text_emerge_created"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/text_race"
         android:layout_alignLeft="@+id/text_race" />
 
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOff="No"
-        android:textOn="Yes"
-        android:id="@+id/toggle_emerge_create"
-        android:layout_alignBottom="@+id/text_emerge_created"
-        android:layout_toRightOf="@+id/text_emerge_created" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mark"
-        android:layout_marginTop="20dp"
         android:width="100dp"
         android:id="@+id/bt_mark"
-        android:layout_below="@+id/text_emerge_created"
-        android:layout_alignLeft="@+id/text_emerge_created" />
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/text_view_blank_unknown"
+        android:layout_alignLeft="@+id/text_view_blank_unknown"
+        android:layout_alignStart="@+id/text_view_blank_unknown" />
 
     <Button
         android:layout_width="wrap_content"
@@ -147,5 +141,25 @@
         android:layout_alignParentRight="true"
         android:width="150dp"
         android:height="70dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:width="80dp"
+        android:id="@+id/edit_text_number_weeks_laying"
+        android:layout_alignBottom="@+id/text_emerge_created"
+        android:layout_toRightOf="@+id/text_emerge_created" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Leave blank if unknown."
+        android:id="@+id/text_view_blank_unknown"
+        android:textStyle="italic"
+        android:layout_below="@+id/text_emerge_created"
+        android:layout_alignLeft="@+id/text_emerge_created"
+        android:layout_alignStart="@+id/text_emerge_created" />
 
 </RelativeLayout>

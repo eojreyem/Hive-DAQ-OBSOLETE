@@ -1,12 +1,15 @@
 package com.centerorbit.hive_daq;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewDebug;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -32,6 +35,8 @@ public class QueenEval extends Activity {
         Button bt_create_queen = (Button) findViewById(R.id.bt_create_queen);
         Button bt_not_seen2 = (Button) findViewById(R.id.bt_not_seen2);
         Button bt_not_seen = (Button) findViewById(R.id.bt_not_seen);
+        ToggleButton t_culled = (ToggleButton) findViewById(R.id.t_culled);
+        ToggleButton t_emerged = (ToggleButton) findViewById(R.id.t_emerged);
 
 
 
@@ -53,6 +58,8 @@ public class QueenEval extends Activity {
             bt_create_queen.setVisibility(View.INVISIBLE);
             bt_not_seen.setVisibility(View.INVISIBLE);
             bt_not_seen2.setVisibility(View.INVISIBLE);
+            t_culled.setVisibility(View.INVISIBLE);
+            t_emerged.setVisibility(View.INVISIBLE);
 
         }
 
@@ -234,6 +241,7 @@ public class QueenEval extends Activity {
 
         else
         {
+
             bt_create_queen.setVisibility(View.INVISIBLE);
             bt_not_seen2.setVisibility(View.INVISIBLE);
             bt_kill.setVisibility(View.INVISIBLE);
@@ -276,6 +284,27 @@ public class QueenEval extends Activity {
     }
 
 
+    public void QcellsSeen(View view){
+        ToggleButton t_culled = (ToggleButton) findViewById(R.id.t_culled);
+        ToggleButton t_emerged = (ToggleButton) findViewById(R.id.t_emerged);
+        ToggleButton t_Qcells = (ToggleButton) findViewById(R.id.t_queen_cells);
+
+
+        if (t_Qcells.isChecked())
+        {
+            t_culled.setVisibility(View.VISIBLE);
+            t_emerged.setVisibility(View.VISIBLE);
+        }
+
+        else
+        {
+            t_culled.setVisibility(View.INVISIBLE);
+            t_emerged.setVisibility(View.INVISIBLE);
+
+        }
+
+
+    }
 
 
 

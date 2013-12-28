@@ -137,8 +137,33 @@
             android:id="@+id/t_queen_cells"
             android:height="70dp"
             android:width="110dp"
+            android:onClick="QcellsSeen"
             android:layout_row="3"
             android:layout_column="0"/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Culled"
+            android:id="@+id/t_culled"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="3"
+            android:layout_column="1"/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Emerged/ Virgins"
+            android:id="@+id/t_emerged"
+            android:height="70dp"
+            android:width="110dp"
+            android:layout_row="3"
+            android:layout_column="2"/>
+
+
+
+
 
         <Button
             android:layout_width="wrap_content"
@@ -211,7 +236,6 @@
             android:layout_row="2"
             android:height="70dp"
             android:width="110dp" />
-
 
 
 
