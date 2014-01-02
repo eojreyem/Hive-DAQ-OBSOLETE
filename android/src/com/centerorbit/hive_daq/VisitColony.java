@@ -25,7 +25,7 @@ implements WeatherInterface {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.inspect_hive, menu);
+		getMenuInflater().inflate(R.menu.inspect_colony, menu);
 		return true;
 	}
 
@@ -83,9 +83,11 @@ implements WeatherInterface {
     public void Camera(View view) {
         Toast.makeText(this.getApplicationContext(), "Take a picture", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-
         startActivityForResult(intent, 0);
+        // TODO store image on SD card.  (currently doesn't store image at all)
+
     }
+
 
     public void Take_note(View view) {
         Toast.makeText(this.getApplicationContext(), "Take a Note", Toast.LENGTH_SHORT).show();

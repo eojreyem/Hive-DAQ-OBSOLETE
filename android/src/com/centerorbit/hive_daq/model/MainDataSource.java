@@ -18,12 +18,14 @@ public class MainDataSource {
 		databaseOpener = new DatabaseOpenHelper(appContext);
 	}
 
+
+
     public ColonyDataSource Colony(){
         return colony;
     }
 
-    protected void notice(String message, int ToastMessageDurration){
-        Toast.makeText(appContext, message, ToastMessageDurration).show();
+    protected void notice(String message, int ToastMessageDuration){
+        Toast.makeText(appContext, message, ToastMessageDuration).show();
     }
 
 	 public void open() throws SQLException {
@@ -34,6 +36,7 @@ public class MainDataSource {
          since no doubt there will be many.
           */
          colony = new ColonyDataSource(this);
+
 	  }
 	 
 	 public void close() {

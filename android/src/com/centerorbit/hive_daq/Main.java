@@ -21,10 +21,10 @@ public class Main extends Activity {
 		return true;
 	}
 	
-	/** Called when the user clicks the Select a Hive */
-	public void selectHive(View view) {
+	/** Called when the user clicks the Select a Colony */
+	public void selectColony(View view) {
 	    // Do something in response to button
-		Intent intent = new Intent(this, HiveSelect.class);
+		Intent intent = new Intent(this, ColonySelect.class);
 		startActivity(intent);
 	}
 

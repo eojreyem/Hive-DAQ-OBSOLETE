@@ -18,7 +18,7 @@ import com.centerorbit.hive_daq.model.MainDataSource;
 
 import java.util.List;
 
-public class HiveSelect extends Activity {
+public class ColonySelect extends Activity {
 
     private MainDataSource datasource;
     private Context appContext;
@@ -28,12 +28,12 @@ public class HiveSelect extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_hive_select);
+		setContentView(R.layout.activity_colony_select);
 
         this.appContext = this;
         that = this;
 
-        ListView listView = (ListView) findViewById(R.id.hive_list);
+        ListView listView = (ListView) findViewById(R.id.colony_list);
 
         datasource = new MainDataSource(appContext);
         datasource.open();
@@ -58,7 +58,7 @@ public class HiveSelect extends Activity {
                 final String selectedFromList = parent.getItemAtPosition(position).toString();
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(appContext);
-                builder.setMessage("An inspection of hive \"" + selectedFromList + "\" on [DATE] is already in progress!")
+                builder.setMessage("An inspection of colony \"" + selectedFromList + "\" on [DATE] is already in progress!")
                         .setCancelable(false)
                         .setPositiveButton("Resume last inspection", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -91,7 +91,7 @@ public class HiveSelect extends Activity {
                 final Colony selectedFromList = (Colony) parent.getItemAtPosition(position);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(appContext);
-                builder.setMessage("Are you sure you want to delete "+selectedFromList.getTitle()+"?")
+                builder.setMessage("Are you sure you want to delete "+selectedFromList.getName()+"?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -121,7 +121,7 @@ public class HiveSelect extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.hive_select, menu);
+		getMenuInflater().inflate(R.menu.colony_select, menu);
 		return true;
 	}
 

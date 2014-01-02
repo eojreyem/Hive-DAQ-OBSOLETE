@@ -6,14 +6,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".HiveSelect" >
+    tools:context=".ColonySelect" >
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/hive_list"
+        android:id="@+id/colony_list"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/select_hive"
+        android:layout_below="@+id/select_colony"
         android:choiceMode="singleChoice"
         android:layout_above="@+id/textView" />
 
@@ -21,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Select Hive"
-        android:id="@+id/select_hive"
+        android:text="Select Colony"
+        android:id="@+id/select_colony"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

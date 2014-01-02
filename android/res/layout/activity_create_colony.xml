@@ -28,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Number:"
-        android:id="@+id/text_view_number"
+        android:text="Name:"
+        android:id="@+id/text_view_name"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/text_view_yard"
         android:layout_alignLeft="@+id/text_view_yard" />
@@ -37,11 +37,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_number"
+        android:id="@+id/edit_text_name"
         android:layout_gravity="center"
         android:width="200dp"
-        android:layout_alignBottom="@+id/text_view_number"
-        android:layout_toRightOf="@+id/text_view_number" />
+        android:layout_alignBottom="@+id/textView_name_header"
+        android:layout_toRightOf="@+id/textView_name_header"
+        android:layout_alignRight="@+id/bt_created_date"
+        android:layout_alignEnd="@+id/bt_created_date" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,15 +52,17 @@
         android:text="Created:"
         android:id="@+id/text_view_created"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/text_view_number"
-        android:layout_alignLeft="@+id/text_view_number" />
+        android:layout_below="@+id/text_view_name"
+        android:layout_alignLeft="@+id/text_view_name" />
 
-    <EditText
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_created"
+        android:id="@+id/bt_created_date"
         android:layout_gravity="center"
         android:width="200dp"
+        android:text="Date Error"
+        android:onClick="CreateDateClicked"
         android:layout_alignBottom="@+id/text_view_created"
         android:layout_toRightOf="@+id/text_view_created" />
 
@@ -75,7 +79,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_from"
+        android:id="@+id/edit_text_source_type"
         android:layout_gravity="center"
         android:width="200dp"
         android:layout_alignBottom="@+id/text_view_from"
@@ -119,15 +123,7 @@
         android:layout_alignBottom="@+id/text_view_hive"
         android:layout_toRightOf="@+id/text_view_hive" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Note"
-        android:id="@+id/button_note"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:width="100dp"
-        android:height="70dp"/>
+
 
     <Button
         android:layout_width="wrap_content"
@@ -136,7 +132,7 @@
         android:id="@+id/button_create"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="create"
+        android:onClick="CreateButton"
         android:width="150dp"
         android:height="70dp" />
 
@@ -150,6 +146,26 @@
         android:textColor="#800000"
         android:layout_above="@+id/button_create"
         android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_colony_note"
+        android:layout_below="@+id/text_view_hive"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_create" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="C-"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/textView_name_header"
+        android:layout_above="@+id/text_view_created"
+        android:layout_toRightOf="@+id/text_view_name" />
 
 
 </RelativeLayout>

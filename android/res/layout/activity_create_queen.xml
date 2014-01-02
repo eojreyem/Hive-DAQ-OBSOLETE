@@ -27,12 +27,21 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_queen_number"
+        android:id="@+id/edit_text_queen_name"
         android:layout_gravity="center"
-        android:width="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/text_queen_number"
-        android:layout_toRightOf="@+id/text_queen_number"/>
+        android:width="100dp"
+        android:layout_above="@+id/text_in_colony"
+        android:layout_toRightOf="@+id/textView_queen_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Q-"
+        android:id="@+id/textView_queen_header"
+        android:layout_marginLeft="10dp"
+        android:layout_above="@+id/text_in_colony"
+        android:layout_toRightOf="@+id/text_queen_number" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,9 +110,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="180dp"
+        android:width="100dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Emerged how many weeks ago?"
+        android:text="Has been laying for"
         android:id="@+id/text_emerge_created"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/text_race"
@@ -117,26 +126,16 @@
         android:text="Mark"
         android:width="100dp"
         android:id="@+id/bt_mark"
-        android:layout_marginTop="15dp"
         android:layout_below="@+id/text_view_blank_unknown"
-        android:layout_alignLeft="@+id/text_view_blank_unknown"
-        android:layout_alignStart="@+id/text_view_blank_unknown" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Note"
-        android:id="@+id/button_note"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:width="100dp"
-        android:height="70dp"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Queen"
         android:id="@+id/button_create"
+        android:onClick="CreateQueenClicked"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:width="150dp"
@@ -146,8 +145,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:width="80dp"
-        android:id="@+id/edit_text_number_weeks_laying"
+        android:width="100dp"
+        android:id="@+id/edit_text_number_laying"
         android:layout_alignBottom="@+id/text_emerge_created"
         android:layout_toRightOf="@+id/text_emerge_created" />
 
@@ -161,5 +160,25 @@
         android:layout_below="@+id/text_emerge_created"
         android:layout_alignLeft="@+id/text_emerge_created"
         android:layout_alignStart="@+id/text_emerge_created" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Days"
+        android:width="120dp"
+        android:onClick="DayWeekYearToggle"
+        android:id="@+id/bt_dayWeekYearToggle"
+        android:layout_alignBottom="@+id/edit_text_number_laying"
+        android:layout_toRightOf="@+id/edit_text_number_laying" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_queen_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_view_blank_unknown"
+        android:layout_toLeftOf="@+id/button_create" />
 
 </RelativeLayout>

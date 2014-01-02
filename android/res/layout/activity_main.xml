@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Hive Visits"
+            android:text="Colony Visits"
             android:id="@+id/main_title"
             android:layout_gravity="center"
             android:layout_row="0"
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select Colony"
-            android:onClick="selectHive"
+            android:onClick="selectColony"
             android:layout_column="2"
             android:layout_row="2" />
 

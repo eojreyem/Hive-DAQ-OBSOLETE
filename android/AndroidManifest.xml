@@ -28,16 +28,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.centerorbit.hive_daq.HiveSelect"
-            android:label="@string/title_activity_hive_select" >
+            android:name=".ColonySelect"
+            android:label="@string/title_activity_colony_select" >
         </activity>
         <activity
             android:name=".VisitColony"
-            android:label="@string/title_activity_inspect_hive" >
+            android:label="@string/title_activity_inspect_colony" >
         </activity>
         <activity
             android:name=".CreateColony"
-            android:label="@string/title_activity_inspect_hive" >
+            android:label="@string/title_activity_Create_Colony" >
         </activity>
         <activity
             android:name=".QueenEval"
@@ -47,18 +47,32 @@
             android:name="com.centerorbit.hive_daq.Evaluation"
             android:label="@string/title_activity_evaluation" >
         </activity>
+
+
         <activity
             android:name=".Disease"
-            android:label="disease_menu" />
+            android:label="@string/title_activity_Disease" />
+
+
         <activity
             android:name=".Management"
-            android:label="Managment" />
+            android:label="Management" />
+
+
         <activity
             android:name=".ColonyDetail"
             android:label="ColonyDetail" />
+
         <activity android:name=".VisitNote" />
-        <activity android:name=".CreateQueen" />
-        <activity android:name=".Evaluation2" />
+
+        <activity android:name=".CreateQueen"
+            android:label="@string/title_activity_CreateQueen"
+            />
+
+        <activity android:name=".Evaluation2"
+            android:label="@string/title_activity_evaluation2" >
+        </activity>
+
         <activity android:name=".QueenDetails" />
 
     </application>
