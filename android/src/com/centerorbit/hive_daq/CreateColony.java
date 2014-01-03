@@ -27,6 +27,7 @@ public class CreateColony extends Activity {
     private int year;
     private int month;
     private int day;
+    private String dateEntered;
     private String colonyHeader;
 
 
@@ -43,8 +44,8 @@ public class CreateColony extends Activity {
         month = rightNow.get(Calendar.MONTH);
         day = rightNow.get(Calendar.DAY_OF_MONTH);
         year = rightNow.get(Calendar.YEAR);
+        dateEntered = AMElib.dateInt_to_String(month,day,year);
 
-        // set date created button text to current date.
         Button bt_created = (Button) findViewById(R.id.bt_created_date);
         String today = month + 1 + "/" + day + "/" + year;
         bt_created.setText(today);
@@ -90,6 +91,7 @@ public class CreateColony extends Activity {
 
         datasource.Colony().create(colonyHeader + newColonyName.getText().toString(), createdDate, newNote.getText().toString());
        // datasource.Colony().create(1, newColonyName.getText().toString(), null, newColonyDateCreated.getText().toString(), 1, 1, 1, 1, newNote.getText().toString());
+        // TODO add dateEntered into database.  Needs column!
         datasource.close();
 
         // Do something in response to button
@@ -109,7 +111,7 @@ public class CreateColony extends Activity {
         super.onPause();
     }
 
-    private void CreateDateClicked(View view) {
+    public void CreateDateClicked(View view) {
         //clicked Date Created button, launch the DatePicker dialog.
         DatePickerDialog newdatepickerdialog = new DatePickerDialog(this, datePickerListener, year, month, day);
         newdatepickerdialog.show();

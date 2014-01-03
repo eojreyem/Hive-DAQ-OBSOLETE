@@ -61,7 +61,7 @@
         android:id="@+id/bt_created_date"
         android:layout_gravity="center"
         android:width="200dp"
-        android:text="Date Error"
+        android:text="Click to set date"
         android:onClick="CreateDateClicked"
         android:layout_alignBottom="@+id/text_view_created"
         android:layout_toRightOf="@+id/text_view_created" />
