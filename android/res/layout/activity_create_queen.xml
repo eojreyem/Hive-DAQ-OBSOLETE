@@ -120,12 +120,14 @@
 
 
 
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mark"
         android:width="100dp"
         android:id="@+id/bt_mark"
+        android:onClick="setQueenMarkColor"
         android:layout_below="@+id/text_view_blank_unknown"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

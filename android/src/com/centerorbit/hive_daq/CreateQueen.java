@@ -3,17 +3,20 @@ package com.centerorbit.hive_daq;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Toast;
-
+import java.lang.Object;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import android.app.Fragment;
+import android.app.FragmentManager;
 import com.centerorbit.hive_daq.model.MainDataSource;
 
 /**
@@ -103,6 +106,10 @@ public class CreateQueen extends Activity {
         catch(NumberFormatException nfe) {
             //TODO need to catch?
         }
+        catch (Exception e)
+        {
+            //
+        }
 
         switch (dayweekyearcount){
             case 0:
@@ -149,4 +156,48 @@ public class CreateQueen extends Activity {
 
     }
 
+    int [] mColor = colorChoice(this);
+
+    public void setQueenMarkColor (View view)
+    {
+        ColorPickerDialog colorMark = ColorPickerDialog.newInstance(R.string.color_picker_default_title,
+                mColor, 0, 3, ColorPickerDialog.SIZE_LARGE);
+        colorMark.show(getFragmentManager(),"mark");
+
+        //Implement listener to get selected color value
+        colorMark.setOnColorSelectedListener(
+                new ColorPickerSwatch.OnColorSelectedListener(){
+
+                    @Override
+                    public void onColorSelected(int colorSelected) {
+                        String queenMarkColorHex = String.format("#%06X", (0xFFFFFF & colorSelected));
+                        Button markButton = (Button) findViewById(R.id.bt_mark);
+                        markButton.setBackgroundColor(colorSelected);
+
+                        Log.e("Color",queenMarkColorHex);  //TODO Log in DB
+                    }
+                }
+        );
+    }
+
+
+
+
+
+    public static int[] colorChoice(Context context){
+
+        int[] mColorChoices=null;
+
+        String[] color_array = {"#FF0000", "#FF8800", "#FFCC00", "#66FF00","#339900","#3300FF","#FF00CC","#FFFFFF","#9900CC","#999900","#999999","#CCCCCC"};
+                //context.getResources().getStringArray(R.array.default_color_choice_values);
+
+        if (color_array!=null && color_array.length>0) {
+            mColorChoices = new int[color_array.length];
+            for (int i = 0; i < color_array.length; i++) {
+                mColorChoices[i] = Color.parseColor(color_array[i]);
+            }
+        }
+        return mColorChoices;
+
+    }
 }
