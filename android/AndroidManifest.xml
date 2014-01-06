@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.centerorbit.hive_daq"
+    package="com.centerorbit.AME"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="10"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+
+    <!-- Permission for using camera/mic for storing photos and videos in DCIM/AME -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Permission for using NFC hardware -->
+    <uses-permission android:name="android.permission.NFC"/>
+    <!-- Forcing device to have NFC hardware -->
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <!-- Forcing device to have Camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
+
 
     <application
         android:allowBackup="true"
@@ -19,61 +30,71 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Main"
+            android:name="com.centerorbit.AME.Main"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
-            android:name=".ColonySelect"
+            android:name="com.centerorbit.AME.ColonySelect"
             android:label="@string/title_activity_colony_select" >
         </activity>
+
         <activity
-            android:name=".VisitColony"
+            android:name="com.centerorbit.AME.VisitColony"
             android:label="@string/title_activity_inspect_colony" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+               <!-- <data android:scheme="http"
+                    android:host="com.centerorbit.AME"
+                    android:pathPrefix="/index.html" /> -->
+            </intent-filter>
         </activity>
         <activity
-            android:name=".CreateColony"
+            android:name="com.centerorbit.AME.CreateColony"
             android:label="@string/title_activity_Create_Colony" >
         </activity>
+
         <activity
-            android:name=".QueenEval"
+            android:name="com.centerorbit.AME.QueenEval"
             android:label="@string/title_activity_queen" >
         </activity>
         <activity
-            android:name="com.centerorbit.hive_daq.Evaluation"
+            android:name="com.centerorbit.AME.Evaluation"
             android:label="@string/title_activity_evaluation" >
         </activity>
 
 
         <activity
-            android:name=".Disease"
+            android:name="com.centerorbit.AME.Disease"
             android:label="@string/title_activity_Disease" />
 
 
         <activity
-            android:name=".Management"
+            android:name="com.centerorbit.AME.Management"
             android:label="Management" />
 
 
         <activity
-            android:name=".ColonyDetail"
+            android:name="com.centerorbit.AME.ColonyDetail"
             android:label="ColonyDetail" />
 
-        <activity android:name=".VisitNote" />
+        <activity android:name="com.centerorbit.AME.VisitNote" />
 
-        <activity android:name=".CreateQueen"
+        <activity android:name="com.centerorbit.AME.CreateQueen"
             android:label="@string/title_activity_CreateQueen"
             />
 
-        <activity android:name=".Evaluation2"
+        <activity android:name="com.centerorbit.AME.Evaluation2"
             android:label="@string/title_activity_evaluation2" >
         </activity>
 
-        <activity android:name=".QueenDetails" />
+        <activity android:name="com.centerorbit.AME.QueenDetails" />
 
     </application>
 

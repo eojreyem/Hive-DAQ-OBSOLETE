@@ -99,24 +99,15 @@
         android:width="100dp"
         android:height="70dp"/>
 
-    <Button
-        android:id="@+id/bt_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openCamera"
-        android:text="Camera"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/button_note"
-        android:height="70dp"
-        android:width="100dp" />
+
 
     <Button
         android:id="@+id/bt_end_visit"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="End Visit"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/bt_managment"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp" />
+        android:layout_toLeftOf="@+id/text_current_visit" />
 
 </RelativeLayout>

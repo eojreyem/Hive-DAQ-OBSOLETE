@@ -38,7 +38,7 @@
         android:text="Save"
         android:id="@+id/bt_save_note"
         android:onClick="SaveNote"
-        android:width="100dp"
+        android:width="120dp"
         android:height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
@@ -72,6 +72,29 @@
         android:onClick="Preset2"
         android:layout_below="@+id/bt_preset1"
         android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/bt_video_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openVideoCamera"
+        android:text="Take Video"
+        android:height="70dp"
+        android:width="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/bt_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openCamera"
+        android:text="Take Picture"
+        android:height="70dp"
+        android:width="100dp"
+        android:layout_alignTop="@+id/bt_video_camera"
+        android:layout_toRightOf="@+id/bt_video_camera" />
 
 
 </RelativeLayout>

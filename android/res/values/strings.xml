@@ -5,13 +5,17 @@
 <string name="app_name">AME</string>
 <string name="action_settings">Settings</string>
 <string name="title_activity_colony_select">Select Colony</string>
-<string name="title_activity_inspect_colony">Inspect Colony</string>
+<string name="title_activity_inspect_colony">Colony Visit</string>
 <string name="title_activity_queen">Queen</string>
 <string name="title_activity_evaluation">Evaluation</string>
 <string name="title_activity_evaluation2">Evaluation 2</string>
 <string name="title_activity_Disease">Disease and Pests</string>
 <string name="title_activity_CreateQueen">Create Queen</string>
 <string name="title_activity_Create_Colony">Create Colony</string>
+
+
+
+
 
 
 <!-- Default title for color picker dialog [CHAR LIMIT=30] -->
