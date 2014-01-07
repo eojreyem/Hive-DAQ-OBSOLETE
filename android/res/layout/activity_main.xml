@@ -8,78 +8,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Colony Visits"
+        android:id="@+id/main_title"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Colony Visits"
-            android:id="@+id/main_title"
-            android:layout_gravity="center"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_columnSpan="3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Scan colony tag OR"
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/main_title"
+        android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Scan colony tag OR"
-            android:layout_gravity="center"
-            android:id="@+id/textView2"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_columnSpan="3"
-            android:textIsSelectable="false" />
+    <AutoCompleteTextView
+        android:layout_height="45dp"
+        android:layout_width="120dp"
+        android:ems="10"
+        android:id="@+id/actv_colony_selector"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="65dp"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_row="2"
-            android:layout_column="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Enter Colony #"
+        android:id="@+id/textView"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/actv_colony_selector"
+        android:layout_alignStart="@+id/actv_colony_selector"
+        android:layout_marginTop="25dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Enter Colony #"
-            android:id="@+id/textView"
-            android:layout_row="3"
-            android:layout_column="0" />
+    <Button
+        android:id="@+id/select_colony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Colony"
+        android:onClick="selectColony"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        <Button
-            android:id="@+id/select_colony"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Colony"
-            android:onClick="selectColony"
-            android:layout_column="2"
-            android:layout_row="2" />
+    <Button
+        android:id="@+id/last_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Selected"
+        android:layout_above="@+id/create_new"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <Button
-            android:id="@+id/last_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Last Selected"
-            android:layout_column="2"
-            android:layout_row="3" />
-
-        <Button
-            android:id="@+id/create_new"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create New"
-            android:onClick="newColony"
-            android:layout_column="0"
-            android:layout_row="5" />
-
-    </GridLayout>
+    <Button
+        android:id="@+id/create_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New"
+        android:onClick="newColony"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

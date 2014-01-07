@@ -46,7 +46,7 @@ public class QueenDataSource {
         return Queens;
     }
 
-    public Queen create(String queenName, String createDate, String note) { /*, String mother...
+    public Queen create(String queenName, String createDate, String mateDate, String note) { /*, String mother...
                           String note){ */
         Cursor cursor;
 
@@ -66,6 +66,7 @@ public class QueenDataSource {
         ContentValues insertValues = new ContentValues();
         insertValues.put(DatabaseOpenHelper.COLUMN_NAME, queenName);
         insertValues.put(DatabaseOpenHelper.COLUMN_DATE_CREATED, createDate);
+        insertValues.put(DatabaseOpenHelper.COLUMN_DATE_MATED, mateDate);
         insertValues.put(DatabaseOpenHelper.COLUMN_NOTE, note);
 
 
@@ -79,6 +80,7 @@ public class QueenDataSource {
         cursor.moveToFirst();
         Queen newQueen = cursorToQueen(cursor);
         cursor.close();
+        home.notice(newQueen.getName()+" created.", Toast.LENGTH_LONG);
         return newQueen;
     }
 
