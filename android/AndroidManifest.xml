@@ -36,6 +36,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- When a NFC card is scanned that is on the tech-list -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_list"/>
         </activity>
 
 
@@ -47,13 +54,8 @@
         <activity
             android:name="com.centerorbit.AME.VisitColony"
             android:label="@string/title_activity_inspect_colony" >
-            <intent-filter>
-                <action android:name="android.nfc.action.TAG_DISCOVERED" />
-                <category android:name="android.intent.category.DEFAULT" />
-               <!-- <data android:scheme="http"
-                    android:host="com.centerorbit.AME"
-                    android:pathPrefix="/index.html" /> -->
-            </intent-filter>
+
+
         </activity>
         <activity
             android:name="com.centerorbit.AME.CreateColony"
